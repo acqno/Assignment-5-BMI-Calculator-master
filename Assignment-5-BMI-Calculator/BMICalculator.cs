@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* Name: Alvun Quijano
+ * Student No: 300795606
  * Date: Aug 13, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.4 - Implemented Metric BMI calculator functionality  
+ * Ver: 0.5 - Implemented RadioButton_Clicked event handler for switching from Metric To Imperial  
  */
 
 
@@ -132,6 +133,18 @@ namespace Assignment_5_BMI_Calculator
             {
                 this.BMIScale = "Obese";
             }
+        }
+
+        private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            MyHeightTextBox2.Visible = true;
+            HeightInchLabel.Visible = true;
+        }
+
+        private void MetricRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            MyHeightTextBox2.Visible = false;
+            HeightInchLabel.Visible = false;
         }
     }
 }

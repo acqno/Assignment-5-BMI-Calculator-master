@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* Name: Alvun Quijano
+ * Student No: 300795606
  * Date: Aug 13, 2017
  * Desc: This is the BMI calculator project
  * Ver: 0.1 - Created the project

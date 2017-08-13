@@ -40,12 +40,14 @@
             this.BMITitleLabel = new System.Windows.Forms.Label();
             this.HeightCMLabel = new System.Windows.Forms.Label();
             this.WeightKGLablel = new System.Windows.Forms.Label();
+            this.HeightInchLabel = new System.Windows.Forms.Label();
+            this.MyHeightTextBox2 = new System.Windows.Forms.TextBox();
             this.BMICalculatorTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // BMICalculatorTableLayout
             // 
-            this.BMICalculatorTableLayout.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMICalculatorTableLayout.BackColor = System.Drawing.Color.Gainsboro;
             this.BMICalculatorTableLayout.ColumnCount = 4;
             this.BMICalculatorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.BMICalculatorTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -61,6 +63,8 @@
             this.BMICalculatorTableLayout.Controls.Add(this.HeightCMLabel, 1, 2);
             this.BMICalculatorTableLayout.Controls.Add(this.WeightKGLablel, 1, 4);
             this.BMICalculatorTableLayout.Controls.Add(this.BMIResultsTextBox, 0, 6);
+            this.BMICalculatorTableLayout.Controls.Add(this.HeightInchLabel, 3, 2);
+            this.BMICalculatorTableLayout.Controls.Add(this.MyHeightTextBox2, 2, 2);
             this.BMICalculatorTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMICalculatorTableLayout.Location = new System.Drawing.Point(12, 77);
             this.BMICalculatorTableLayout.Name = "BMICalculatorTableLayout";
@@ -87,6 +91,7 @@
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = true;
+            this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
             // 
             // ImperialRadioButton
             // 
@@ -99,6 +104,7 @@
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialRadioButton.CheckedChanged += new System.EventHandler(this.ImperialRadioButton_CheckedChanged);
             // 
             // MyHeightLabel
             // 
@@ -187,9 +193,28 @@
             this.WeightKGLablel.TabIndex = 10;
             this.WeightKGLablel.Text = "KG";
             // 
+            // HeightInchLabel
+            // 
+            this.HeightInchLabel.AutoSize = true;
+            this.HeightInchLabel.Location = new System.Drawing.Point(213, 102);
+            this.HeightInchLabel.Name = "HeightInchLabel";
+            this.HeightInchLabel.Size = new System.Drawing.Size(51, 51);
+            this.HeightInchLabel.TabIndex = 11;
+            this.HeightInchLabel.Text = "Inch";
+            this.HeightInchLabel.Visible = false;
+            // 
+            // MyHeightTextBox2
+            // 
+            this.MyHeightTextBox2.Location = new System.Drawing.Point(143, 105);
+            this.MyHeightTextBox2.Name = "MyHeightTextBox2";
+            this.MyHeightTextBox2.Size = new System.Drawing.Size(64, 38);
+            this.MyHeightTextBox2.TabIndex = 12;
+            this.MyHeightTextBox2.Visible = false;
+            // 
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.BMITitleLabel);
             this.Controls.Add(this.BMICalculatorTableLayout);
@@ -222,6 +247,8 @@
         private System.Windows.Forms.Label BMITitleLabel;
         private System.Windows.Forms.Label HeightCMLabel;
         private System.Windows.Forms.Label WeightKGLablel;
+        private System.Windows.Forms.Label HeightInchLabel;
+        private System.Windows.Forms.TextBox MyHeightTextBox2;
     }
 }
 
