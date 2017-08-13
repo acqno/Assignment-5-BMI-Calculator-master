@@ -11,15 +11,15 @@ using System.Windows.Forms;
 /* Name: Alvun Quijano
  * Date: Aug 13, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.1 - Created the BMI calculator project 
+ * Ver: 0.2 - Basic User Interface created for BMI Calculator
  */
 
 
 namespace Assignment_5_BMI_Calculator
 {
-    public partial class Form1 : Form
+    public partial class BMICalculator : Form
     {
-        public Form1()
+        public BMICalculator()
         {
             InitializeComponent();
         }
@@ -28,5 +28,6 @@ namespace Assignment_5_BMI_Calculator
         {
 
         }
+
     }
 }
