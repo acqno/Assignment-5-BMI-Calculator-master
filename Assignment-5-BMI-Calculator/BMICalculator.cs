@@ -11,7 +11,7 @@ using System.Windows.Forms;
 /* Name: Alvun Quijano
  * Date: Aug 13, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.3 - Created the _CalculateBMI event handler 
+ * Ver: 0.4 - Implemented Metric BMI calculator functionality  
  */
 
 
@@ -26,6 +26,8 @@ namespace Assignment_5_BMI_Calculator
         private double _heightInCm;
 
         private double _bmi;
+
+        private string _bmiScale;
 
         // PUBLIC PROPERTIES 
 
@@ -65,6 +67,18 @@ namespace Assignment_5_BMI_Calculator
             }
         }
 
+        public string BMIScale
+        {
+            get
+            {
+                return this._bmiScale;
+            }
+            set
+            {
+                this._bmiScale = value;
+            }
+        }
+
         /// <summary>
         /// This is the main constructor for the BMI Calculator class
         /// </summary>
@@ -89,6 +103,7 @@ namespace Assignment_5_BMI_Calculator
             HeightInCm = Convert.ToDouble(MyHeightTextBox.Text);
 
             _CalculateBMI(this.WeightInKg, this.HeightInCm);
+            BMIResultsTextBox.Text = "Your Body Mass Index is " + Math.Round(this.BMI, 1) + ". This is considered " + this.BMIScale;
         }
 
         /// <summary>
@@ -99,7 +114,24 @@ namespace Assignment_5_BMI_Calculator
             // convert to meters
             height /= 100;
 
-            BMI = weight / ()
+            BMI = weight / (height * height);
+
+            if (BMI < 18.5)
+            {
+                this.BMIScale = "Underweight";
+            }
+            else if ((BMI >= 18.5) && (BMI <= 24.9))
+            {
+                this.BMIScale = "Normal";
+            }
+            else if ((BMI >= 25) && (BMI <= 29.9))
+            {
+                this.BMIScale = "Overweight";
+            }
+            else
+            {
+                this.BMIScale = "Obese";
+            }
         }
     }
 }

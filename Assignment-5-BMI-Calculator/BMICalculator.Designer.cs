@@ -135,9 +135,11 @@
             this.BMIResultsTextBox.BackColor = System.Drawing.Color.LightBlue;
             this.BMICalculatorTableLayout.SetColumnSpan(this.BMIResultsTextBox, 4);
             this.BMIResultsTextBox.Enabled = false;
+            this.BMIResultsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMIResultsTextBox.Location = new System.Drawing.Point(3, 309);
+            this.BMIResultsTextBox.Multiline = true;
             this.BMIResultsTextBox.Name = "BMIResultsTextBox";
-            this.BMIResultsTextBox.Size = new System.Drawing.Size(274, 38);
+            this.BMIResultsTextBox.Size = new System.Drawing.Size(274, 48);
             this.BMIResultsTextBox.TabIndex = 7;
             // 
             // MyWeightTextBox
