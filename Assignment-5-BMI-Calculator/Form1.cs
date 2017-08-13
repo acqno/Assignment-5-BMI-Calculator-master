@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* Name: Alvun Quijano
- * Date: Aug 04, 2017
+ * Date: Aug 13, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.2 - Implemented the radio buttons for metric and imperial system
+ * Ver: 0.1 - Created the BMI calculator project 
  */
 
 
