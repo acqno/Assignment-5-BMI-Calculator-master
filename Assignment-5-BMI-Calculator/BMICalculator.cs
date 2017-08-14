@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.8 - Added Reset button to BMICalculator form
+ * Ver: 0.9 - Implemented ResetButton_Click event that resets the BMICalculator to its original state
  */
 
 
@@ -222,6 +222,18 @@ namespace Assignment_5_BMI_Calculator
             HeightLabel2.Visible = false;
             HeightLabel1.Text = "cm";
             WeightLabel.Text = "kg";
+        }
+
+        /// <summary>
+        /// This is the Reset button method that reset's the screen to its original state
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            MyHeightTextBox.Text = "";
+            MyHeightTextBox2.Text = "";
+            MyWeightTextBox.Text = "";
         }
     }
 }
