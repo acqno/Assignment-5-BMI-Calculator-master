@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator Splashform
- * Ver: 0.1 - Created the BMI calculator Splashform
+ * Ver: 0.2 - Implemented Splashform to BMICalculator form
  */
 
 namespace Assignment_5_BMI_Calculator
