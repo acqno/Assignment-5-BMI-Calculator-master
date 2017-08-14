@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 /* Name: Alvun Quijano
  * Student No: 300795606
- * Date: Aug 13, 2017
+ * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.6 - Implemented Calculate BMI method that takes Imperial units 
+ * Ver: 0.7 - Refactored the CalculateBMIButton_Click event 
  */
 
 
@@ -123,22 +123,14 @@ namespace Assignment_5_BMI_Calculator
         /// <param name="e"></param>
         private void CalculateBMIButton_Click(object sender, EventArgs e)
         {
-            WeightInKg = Convert.ToDouble(MyWeightTextBox.Text);
-            HeightInCm = Convert.ToDouble(MyHeightTextBox.Text);
-
-            WeightInLbs = Convert.ToDouble(MyWeightTextBox.Text);
-            HeightInInches = Convert.ToDouble(MyHeightTextBox.Text); // Takes height value from the Feet Textbox
-                       
-            HeightInInches *= 12; // Convert feet to inches
-            HeightInInches += Convert.ToDouble(MyHeightTextBox2.Text); // Adds inches value from Inches Textbox
 
             if (MetricRadioButton.Checked)
             {
-                _CalculateMetBMI(this.WeightInKg, this.HeightInCm);
+                _CalculateMetBMI();
             }
             else
             {
-                _CalculateImpBMI(this.WeightInLbs, this.HeightInInches);
+                _CalculateImpBMI();
             }
             
             BMIResultsTextBox.Text = "Your Body Mass Index is " + Math.Round(this.BMI, 1) + ". This is considered " + this.BMIScale;
@@ -147,12 +139,13 @@ namespace Assignment_5_BMI_Calculator
         /// <summary>
         /// This is the Metric calculate BMI method that takes Metric units to calculate the BMI
         /// </summary>
-        private void _CalculateMetBMI(double weight, double height)
+        private void _CalculateMetBMI()
         {
-            // convert to meters
-            height /= 100;
+            this.WeightInKg = Convert.ToDouble(MyWeightTextBox.Text);
+            this.HeightInCm = Convert.ToDouble(MyHeightTextBox.Text);
+            this.HeightInCm /= 100; // Converts height to meters
 
-            this.BMI = weight / (height * height);
+            this.BMI = WeightInKg / (HeightInCm * HeightInCm);
 
             if (BMI < 18.5)
             {
@@ -177,9 +170,15 @@ namespace Assignment_5_BMI_Calculator
         /// </summary>
         /// <param name="weight"></param>
         /// <param name="height"></param>
-        private void _CalculateImpBMI(double weight, double height)
+        private void _CalculateImpBMI()
         {
-            this.BMI = (weight * 703) / (height * height);
+            this.WeightInLbs = Convert.ToDouble(MyWeightTextBox.Text);
+            this.HeightInInches = Convert.ToDouble(MyHeightTextBox.Text); // Takes height value from the Feet Textbox
+
+            this.HeightInInches *= 12; // Convert feet to inches
+            this.HeightInInches += Convert.ToDouble(MyHeightTextBox2.Text); // Adds inches value from Inches Textbox
+
+            this.BMI = (WeightInLbs * 703) / (HeightInInches * HeightInInches);
 
             if (BMI < 18.5)
             {
