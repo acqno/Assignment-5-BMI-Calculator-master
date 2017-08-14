@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.9 - Implemented ResetButton_Click event that resets the BMICalculator to its original state
+ * Ver: 1.0 - Refactored ResetButton_Click event that resets the BMICalculator to its original state
  */
 
 
@@ -234,6 +234,7 @@ namespace Assignment_5_BMI_Calculator
             MyHeightTextBox.Text = "";
             MyHeightTextBox2.Text = "";
             MyWeightTextBox.Text = "";
+            BMIResultsTextBox.Text = "";
         }
     }
 }
