@@ -38,9 +38,9 @@
             this.MyWeightTextBox = new System.Windows.Forms.TextBox();
             this.MyWeightLabel = new System.Windows.Forms.Label();
             this.BMITitleLabel = new System.Windows.Forms.Label();
-            this.HeightCMLabel = new System.Windows.Forms.Label();
-            this.WeightKGLablel = new System.Windows.Forms.Label();
-            this.HeightInchLabel = new System.Windows.Forms.Label();
+            this.HeightLabel1 = new System.Windows.Forms.Label();
+            this.WeightLabel = new System.Windows.Forms.Label();
+            this.HeightLabel2 = new System.Windows.Forms.Label();
             this.MyHeightTextBox2 = new System.Windows.Forms.TextBox();
             this.BMICalculatorTableLayout.SuspendLayout();
             this.SuspendLayout();
@@ -60,11 +60,11 @@
             this.BMICalculatorTableLayout.Controls.Add(this.MyWeightLabel, 0, 3);
             this.BMICalculatorTableLayout.Controls.Add(this.MyWeightTextBox, 0, 4);
             this.BMICalculatorTableLayout.Controls.Add(this.CalculateBMIButton, 0, 5);
-            this.BMICalculatorTableLayout.Controls.Add(this.HeightCMLabel, 1, 2);
-            this.BMICalculatorTableLayout.Controls.Add(this.WeightKGLablel, 1, 4);
+            this.BMICalculatorTableLayout.Controls.Add(this.HeightLabel1, 1, 2);
+            this.BMICalculatorTableLayout.Controls.Add(this.WeightLabel, 1, 4);
             this.BMICalculatorTableLayout.Controls.Add(this.BMIResultsTextBox, 0, 6);
-            this.BMICalculatorTableLayout.Controls.Add(this.HeightInchLabel, 3, 2);
             this.BMICalculatorTableLayout.Controls.Add(this.MyHeightTextBox2, 2, 2);
+            this.BMICalculatorTableLayout.Controls.Add(this.HeightLabel2, 3, 2);
             this.BMICalculatorTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMICalculatorTableLayout.Location = new System.Drawing.Point(12, 77);
             this.BMICalculatorTableLayout.Name = "BMICalculatorTableLayout";
@@ -78,7 +78,6 @@
             this.BMICalculatorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.BMICalculatorTableLayout.Size = new System.Drawing.Size(280, 360);
             this.BMICalculatorTableLayout.TabIndex = 0;
-            this.BMICalculatorTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLayout_Paint);
             // 
             // MetricRadioButton
             // 
@@ -175,33 +174,33 @@
             this.BMITitleLabel.Text = "BMI Calculator";
             this.BMITitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // HeightCMLabel
+            // HeightLabel1
             // 
-            this.HeightCMLabel.AutoSize = true;
-            this.HeightCMLabel.Location = new System.Drawing.Point(73, 102);
-            this.HeightCMLabel.Name = "HeightCMLabel";
-            this.HeightCMLabel.Size = new System.Drawing.Size(56, 31);
-            this.HeightCMLabel.TabIndex = 9;
-            this.HeightCMLabel.Text = "CM";
+            this.HeightLabel1.AutoSize = true;
+            this.HeightLabel1.Location = new System.Drawing.Point(73, 102);
+            this.HeightLabel1.Name = "HeightLabel1";
+            this.HeightLabel1.Size = new System.Drawing.Size(50, 31);
+            this.HeightLabel1.TabIndex = 9;
+            this.HeightLabel1.Text = "cm";
             // 
-            // WeightKGLablel
+            // WeightLabel
             // 
-            this.WeightKGLablel.AutoSize = true;
-            this.WeightKGLablel.Location = new System.Drawing.Point(73, 204);
-            this.WeightKGLablel.Name = "WeightKGLablel";
-            this.WeightKGLablel.Size = new System.Drawing.Size(53, 31);
-            this.WeightKGLablel.TabIndex = 10;
-            this.WeightKGLablel.Text = "KG";
+            this.WeightLabel.AutoSize = true;
+            this.WeightLabel.Location = new System.Drawing.Point(73, 204);
+            this.WeightLabel.Name = "WeightLabel";
+            this.WeightLabel.Size = new System.Drawing.Size(43, 31);
+            this.WeightLabel.TabIndex = 10;
+            this.WeightLabel.Text = "kg";
             // 
-            // HeightInchLabel
+            // HeightLabel2
             // 
-            this.HeightInchLabel.AutoSize = true;
-            this.HeightInchLabel.Location = new System.Drawing.Point(213, 102);
-            this.HeightInchLabel.Name = "HeightInchLabel";
-            this.HeightInchLabel.Size = new System.Drawing.Size(51, 51);
-            this.HeightInchLabel.TabIndex = 11;
-            this.HeightInchLabel.Text = "Inch";
-            this.HeightInchLabel.Visible = false;
+            this.HeightLabel2.AutoSize = true;
+            this.HeightLabel2.Location = new System.Drawing.Point(213, 102);
+            this.HeightLabel2.Name = "HeightLabel2";
+            this.HeightLabel2.Size = new System.Drawing.Size(35, 31);
+            this.HeightLabel2.TabIndex = 11;
+            this.HeightLabel2.Text = "in";
+            this.HeightLabel2.Visible = false;
             // 
             // MyHeightTextBox2
             // 
@@ -245,9 +244,9 @@
         private System.Windows.Forms.Button CalculateBMIButton;
         private System.Windows.Forms.TextBox BMIResultsTextBox;
         private System.Windows.Forms.Label BMITitleLabel;
-        private System.Windows.Forms.Label HeightCMLabel;
-        private System.Windows.Forms.Label WeightKGLablel;
-        private System.Windows.Forms.Label HeightInchLabel;
+        private System.Windows.Forms.Label HeightLabel1;
+        private System.Windows.Forms.Label WeightLabel;
+        private System.Windows.Forms.Label HeightLabel2;
         private System.Windows.Forms.TextBox MyHeightTextBox2;
     }
 }
