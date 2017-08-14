@@ -19,10 +19,27 @@ namespace Assignment_5_BMI_Calculator
 {
     public partial class BMICalculatorSplashForm : Form
     {
+        // PUBLIC PROPERTIES 
+
+        public BMICalculator BMICalculatorForm
+        {
+            get
+            {
+                return Program.BMIcalculatorForm;
+            }
+        }
+
         public BMICalculatorSplashForm()
         {
             InitializeComponent();
         }
 
+        private void SplashFormTimer_Tick(object sender, EventArgs e)
+        {
+            this.BMICalculatorForm.Show();
+            this.Hide();
+
+            SplashFormTimer.Enabled = true;
+        }
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 1.0 - Refactored ResetButton_Click event that resets the BMICalculator to its original state
+ * Ver: 1.1 - Added the BMICalculator_FormClosing event
  */
 
 
@@ -235,6 +235,16 @@ namespace Assignment_5_BMI_Calculator
             MyHeightTextBox2.Text = "";
             MyWeightTextBox.Text = "";
             BMIResultsTextBox.Text = "";
+        }
+
+        /// <summary>
+        /// This is an event handler for the "Form closing" event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

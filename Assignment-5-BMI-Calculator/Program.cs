@@ -6,24 +6,29 @@ using System.Windows.Forms;
 
 /* Name: Alvun Quijano
  * Student No: 300795606
- * Date: Aug 13, 2017
+ * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.1 - Created the project
+ * Ver: 0.2 - Added the Splashform
  */
 
 namespace Assignment_5_BMI_Calculator
 {
-    static class Program
+    public static class Program
     {
+        public static BMICalculator BMIcalculatorForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+
+            BMIcalculatorForm = new BMICalculator();
+
+            Application.Run(new BMICalculatorSplashForm());
         }
     }
 }

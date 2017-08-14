@@ -174,7 +174,7 @@
             // 
             // BMIResultsTextBox
             // 
-            this.BMIResultsTextBox.BackColor = System.Drawing.Color.LightBlue;
+            this.BMIResultsTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BMICalculatorTableLayout.SetColumnSpan(this.BMIResultsTextBox, 4);
             this.BMIResultsTextBox.Enabled = false;
             this.BMIResultsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,7 +226,7 @@
             // BMICalculator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.BMITitleLabel);
             this.Controls.Add(this.BMICalculatorTableLayout);
@@ -238,6 +238,7 @@
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculator_FormClosing);
             this.BMICalculatorTableLayout.ResumeLayout(false);
             this.BMICalculatorTableLayout.PerformLayout();
             this.ResumeLayout(false);
