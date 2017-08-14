@@ -33,15 +33,16 @@
             this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.MyHeightLabel = new System.Windows.Forms.Label();
             this.MyHeightTextBox = new System.Windows.Forms.TextBox();
-            this.CalculateBMIButton = new System.Windows.Forms.Button();
-            this.BMIResultsTextBox = new System.Windows.Forms.TextBox();
-            this.MyWeightTextBox = new System.Windows.Forms.TextBox();
             this.MyWeightLabel = new System.Windows.Forms.Label();
-            this.BMITitleLabel = new System.Windows.Forms.Label();
+            this.MyWeightTextBox = new System.Windows.Forms.TextBox();
+            this.CalculateBMIButton = new System.Windows.Forms.Button();
             this.HeightLabel1 = new System.Windows.Forms.Label();
             this.WeightLabel = new System.Windows.Forms.Label();
-            this.HeightLabel2 = new System.Windows.Forms.Label();
+            this.BMIResultsTextBox = new System.Windows.Forms.TextBox();
             this.MyHeightTextBox2 = new System.Windows.Forms.TextBox();
+            this.HeightLabel2 = new System.Windows.Forms.Label();
+            this.BMITitleLabel = new System.Windows.Forms.Label();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.BMICalculatorTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.BMICalculatorTableLayout.Controls.Add(this.BMIResultsTextBox, 0, 6);
             this.BMICalculatorTableLayout.Controls.Add(this.MyHeightTextBox2, 2, 2);
             this.BMICalculatorTableLayout.Controls.Add(this.HeightLabel2, 3, 2);
+            this.BMICalculatorTableLayout.Controls.Add(this.ResetButton, 2, 5);
             this.BMICalculatorTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BMICalculatorTableLayout.Location = new System.Drawing.Point(12, 77);
             this.BMICalculatorTableLayout.Name = "BMICalculatorTableLayout";
@@ -123,6 +125,23 @@
             this.MyHeightTextBox.Size = new System.Drawing.Size(64, 38);
             this.MyHeightTextBox.TabIndex = 3;
             // 
+            // MyWeightLabel
+            // 
+            this.MyWeightLabel.AutoSize = true;
+            this.BMICalculatorTableLayout.SetColumnSpan(this.MyWeightLabel, 3);
+            this.MyWeightLabel.Location = new System.Drawing.Point(3, 153);
+            this.MyWeightLabel.Name = "MyWeightLabel";
+            this.MyWeightLabel.Size = new System.Drawing.Size(141, 31);
+            this.MyWeightLabel.TabIndex = 5;
+            this.MyWeightLabel.Text = "My Weight";
+            // 
+            // MyWeightTextBox
+            // 
+            this.MyWeightTextBox.Location = new System.Drawing.Point(3, 207);
+            this.MyWeightTextBox.Name = "MyWeightTextBox";
+            this.MyWeightTextBox.Size = new System.Drawing.Size(64, 38);
+            this.MyWeightTextBox.TabIndex = 4;
+            // 
             // CalculateBMIButton
             // 
             this.BMICalculatorTableLayout.SetColumnSpan(this.CalculateBMIButton, 2);
@@ -134,45 +153,6 @@
             this.CalculateBMIButton.Text = "Calculate BMI";
             this.CalculateBMIButton.UseVisualStyleBackColor = true;
             this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateBMIButton_Click);
-            // 
-            // BMIResultsTextBox
-            // 
-            this.BMIResultsTextBox.BackColor = System.Drawing.Color.LightBlue;
-            this.BMICalculatorTableLayout.SetColumnSpan(this.BMIResultsTextBox, 4);
-            this.BMIResultsTextBox.Enabled = false;
-            this.BMIResultsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMIResultsTextBox.Location = new System.Drawing.Point(3, 309);
-            this.BMIResultsTextBox.Multiline = true;
-            this.BMIResultsTextBox.Name = "BMIResultsTextBox";
-            this.BMIResultsTextBox.Size = new System.Drawing.Size(274, 48);
-            this.BMIResultsTextBox.TabIndex = 7;
-            // 
-            // MyWeightTextBox
-            // 
-            this.MyWeightTextBox.Location = new System.Drawing.Point(3, 207);
-            this.MyWeightTextBox.Name = "MyWeightTextBox";
-            this.MyWeightTextBox.Size = new System.Drawing.Size(64, 38);
-            this.MyWeightTextBox.TabIndex = 4;
-            // 
-            // MyWeightLabel
-            // 
-            this.MyWeightLabel.AutoSize = true;
-            this.BMICalculatorTableLayout.SetColumnSpan(this.MyWeightLabel, 3);
-            this.MyWeightLabel.Location = new System.Drawing.Point(3, 153);
-            this.MyWeightLabel.Name = "MyWeightLabel";
-            this.MyWeightLabel.Size = new System.Drawing.Size(141, 31);
-            this.MyWeightLabel.TabIndex = 5;
-            this.MyWeightLabel.Text = "My Weight";
-            // 
-            // BMITitleLabel
-            // 
-            this.BMITitleLabel.AutoSize = true;
-            this.BMITitleLabel.Location = new System.Drawing.Point(54, 9);
-            this.BMITitleLabel.Name = "BMITitleLabel";
-            this.BMITitleLabel.Size = new System.Drawing.Size(192, 31);
-            this.BMITitleLabel.TabIndex = 1;
-            this.BMITitleLabel.Text = "BMI Calculator";
-            this.BMITitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // HeightLabel1
             // 
@@ -192,6 +172,26 @@
             this.WeightLabel.TabIndex = 10;
             this.WeightLabel.Text = "kg";
             // 
+            // BMIResultsTextBox
+            // 
+            this.BMIResultsTextBox.BackColor = System.Drawing.Color.LightBlue;
+            this.BMICalculatorTableLayout.SetColumnSpan(this.BMIResultsTextBox, 4);
+            this.BMIResultsTextBox.Enabled = false;
+            this.BMIResultsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BMIResultsTextBox.Location = new System.Drawing.Point(3, 309);
+            this.BMIResultsTextBox.Multiline = true;
+            this.BMIResultsTextBox.Name = "BMIResultsTextBox";
+            this.BMIResultsTextBox.Size = new System.Drawing.Size(274, 48);
+            this.BMIResultsTextBox.TabIndex = 7;
+            // 
+            // MyHeightTextBox2
+            // 
+            this.MyHeightTextBox2.Location = new System.Drawing.Point(143, 105);
+            this.MyHeightTextBox2.Name = "MyHeightTextBox2";
+            this.MyHeightTextBox2.Size = new System.Drawing.Size(64, 38);
+            this.MyHeightTextBox2.TabIndex = 12;
+            this.MyHeightTextBox2.Visible = false;
+            // 
             // HeightLabel2
             // 
             this.HeightLabel2.AutoSize = true;
@@ -202,13 +202,25 @@
             this.HeightLabel2.Text = "in";
             this.HeightLabel2.Visible = false;
             // 
-            // MyHeightTextBox2
+            // BMITitleLabel
             // 
-            this.MyHeightTextBox2.Location = new System.Drawing.Point(143, 105);
-            this.MyHeightTextBox2.Name = "MyHeightTextBox2";
-            this.MyHeightTextBox2.Size = new System.Drawing.Size(64, 38);
-            this.MyHeightTextBox2.TabIndex = 12;
-            this.MyHeightTextBox2.Visible = false;
+            this.BMITitleLabel.AutoSize = true;
+            this.BMITitleLabel.Location = new System.Drawing.Point(54, 9);
+            this.BMITitleLabel.Name = "BMITitleLabel";
+            this.BMITitleLabel.Size = new System.Drawing.Size(192, 31);
+            this.BMITitleLabel.TabIndex = 1;
+            this.BMITitleLabel.Text = "BMI Calculator";
+            this.BMITitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(143, 258);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(64, 23);
+            this.ResetButton.TabIndex = 13;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
             // 
             // BMICalculator
             // 
@@ -248,6 +260,7 @@
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Label HeightLabel2;
         private System.Windows.Forms.TextBox MyHeightTextBox2;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 

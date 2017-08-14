@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 0.7 - Refactored the CalculateBMIButton_Click event 
+ * Ver: 0.8 - Added Reset button to BMICalculator form
  */
 
 
