@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splashform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splashform.Designer.cs">
+      <DependentUpon>Splashform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BMICalculator.resx">
       <DependentUpon>BMICalculator.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Splashform.resx">
+      <DependentUpon>Splashform.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
