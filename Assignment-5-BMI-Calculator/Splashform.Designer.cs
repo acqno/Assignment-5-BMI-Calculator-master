@@ -53,7 +53,7 @@
             this.AuthorLabel.Name = "AuthorLabel";
             this.AuthorLabel.Size = new System.Drawing.Size(108, 32);
             this.AuthorLabel.TabIndex = 2;
-            this.AuthorLabel.Text = "By: Alvin Quijano\r\nVersion: 1.0";
+            this.AuthorLabel.Text = "By: Alvin Quijano\r\nVersion: 1.1";
             // 
             // SplashFormPictureBox
             // 
