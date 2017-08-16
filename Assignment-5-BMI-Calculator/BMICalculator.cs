@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No: 300795606
  * Date: Aug 14, 2017
  * Desc: This is the BMI calculator project
- * Ver: 1.1 - Added the BMICalculator_FormClosing event
+ * Ver: 1.2 - Fixed bug, would crashe upon clicking calculateBMI_button when no values were given
  */
 
 
@@ -126,14 +126,41 @@ namespace Assignment_5_BMI_Calculator
 
             if (MetricRadioButton.Checked)
             {
-                _CalculateMetBMI();
+                if (((MyHeightTextBox.Text == "") || (MyHeightTextBox2.Text == "")) && (MyWeightTextBox.Text == ""))
+                {
+                    MyHeightTextBox.Text = "";
+                    MyHeightTextBox2.Text = "";
+                    MyWeightTextBox.Text = "";
+                }
+                else
+                {
+                    _CalculateMetBMI();
+                }
+                
             }
             else
             {
-                _CalculateImpBMI();
+                if (((MyHeightTextBox.Text == "") || (MyHeightTextBox2.Text == "")) && (MyWeightTextBox.Text == ""))
+                {
+                    MyHeightTextBox.Text = "";
+                    MyHeightTextBox2.Text = "";
+                    MyWeightTextBox.Text = "";
+                }
+                else
+                {
+                    _CalculateImpBMI();
+                }
             }
             
-            BMIResultsTextBox.Text = "Your Body Mass Index is " + Math.Round(this.BMI, 1) + ". This is considered " + this.BMIScale;
+            if (this.BMI > 0)
+            {
+                BMIResultsTextBox.Text = "Your Body Mass Index is " + Math.Round(this.BMI, 1) + ". This is considered " + this.BMIScale;
+            }
+            else
+            {
+                BMIResultsTextBox.Text = "";
+            }
+            
         }
 
         /// <summary>
